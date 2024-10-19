@@ -4,6 +4,9 @@ main = "src/index.ts"
 compatibility_date = "2024-10-11"
 compatibility_flags = ["nodejs_compat"]
 
+# デプロイ先のアカウントIDを設定
+# account_id = "XXXXXXXXXXX"
+
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
 # Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
@@ -112,3 +115,7 @@ enabled = true
 # [[vectorize]]
 # binding = "MY_INDEX"
 # index_name = "my-index"
+
+# トリガー設定（UTC時間で設定。+9時間すると日本時間）
+# [triggers]
+# crons = ["0 22 * * *"]
